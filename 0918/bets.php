@@ -13,6 +13,7 @@ return [
 			'qin' => '1, 2, 4, 5, 6, 8',
 			'trio' => '1, 2, 3, 4, 5, 6, 8',//count trio: 7
 			'inter' => '2',
+			'diff' => '7, 9',//count diff: 2
 		],
 		'win amount' => 45,
 		'qin amount' => 53,
@@ -42,6 +43,7 @@ return [
 			'qin' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
 			'trio' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',//count trio: 10
 			'inter' => '2, 4, 7',
+			'diff' => '',//count diff: 0
 		],
 		'win amount' => 28,
 		'qin amount' => 118.5,
@@ -74,6 +76,7 @@ return [
 			'qin' => '1, 2, 3, 4, 5, 8',
 			'trio' => '1, 2, 3, 4, 5, 8, 9',//count trio: 7
 			'inter' => '',
+			'diff' => '6, 7',//count diff: 2
 		],
 		'win amount' => 52.5,
 		'qin amount' => 356,
@@ -103,6 +106,7 @@ return [
 			'qin' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12',
 			'trio' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12',//count trio: 12
 			'inter' => '1, 3, 4, 11',
+			'diff' => '',//count diff: 0
 		],
 		'win amount' => 98.5,
 		'qin amount' => 267,
@@ -132,6 +136,7 @@ return [
 			'qin' => '2, 3, 4, 5, 7, 9, 10',
 			'trio' => '2, 3, 4, 5, 6, 7, 9, 10',//count trio: 8
 			'inter' => '5, 9',
+			'diff' => '1, 8',//count diff: 2
 		],
 		'win amount' => 52.5,
 		'qin amount' => 153.5,
@@ -161,6 +166,7 @@ return [
 			'qin' => '1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12',
 			'trio' => '1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12',//count trio: 11
 			'inter' => '2, 3, 10',
+			'diff' => '4',//count diff: 1
 		],
 		'win amount' => 79,
 		'qin amount' => 388.5,
@@ -193,6 +199,7 @@ return [
 			'qin' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
 			'trio' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',//count trio: 10
 			'inter' => '1, 7',
+			'diff' => '',//count diff: 0
 		],
 		'win amount' => 56,
 		'qin amount' => 80.5,
@@ -229,6 +236,7 @@ return [
 			'qin' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12',
 			'trio' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12',//count trio: 11
 			'inter' => '2, 8',
+			'diff' => '10',//count diff: 1
 		],
 		'win amount' => 97.5,
 		'qin amount' => 1316.5,
@@ -256,4 +264,5 @@ return [
 //total place wp: 0
 //total sure place: -50
 //total win: 0
+//total place union: 0
 //total: -250

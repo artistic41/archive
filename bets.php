@@ -29,6 +29,7 @@ $total = 0;
 $totalPlaceEndF = 0;
 $totalPlaceEndW = 0;
 $totalPlaceW = 0;
+$totalPlaceUnion = 0;
 $totalSurePlace = 0;
 $totalWin = 0;
 
@@ -66,7 +67,6 @@ for ($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber++) {
     if(isset($oldFavorites)) $favorites = $oldFavorites;
     else $favorites = [];
     $winsArray = $allRacesOdds[$raceNumber];
-    if(empty($winsArray)) continue;
     asort($winsArray);
     $runners = array_keys($winsArray);
     if(isset($allWinOdds)){
@@ -122,6 +122,8 @@ for ($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber++) {
     $racetext .= "\t\t\t'trio' => '" . implode(", ", $suggestions["trio"]) . "',//count trio: " . count($suggestions["trio"]) . "\n";
     $inter = array_intersect($favorites, $suggestions["win"]);
     $racetext .= "\t\t\t'inter' => '" . implode(", ", $inter) . "',\n";
+    $diff = array_diff($runners, $suggestions["trio"]);
+    $racetext .= "\t\t\t'diff' => '" . implode(", ", $diff) . "',//count diff: " . count($diff) . "\n";
     
     $racetext .= "\t\t],\n";
     if(isset($winAmount)){
@@ -191,15 +193,25 @@ for ($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber++) {
         $union = array_values(array_unique(array_merge($winInter, $favorites)));
         sort($union);
         if(count($union) === 4){
-            $racetext .= "\t\t\t'win(union $revision)' => '" . implode(", ", $union) . "',\n"; 
-            $totalBets[$raceNumber] += $unitBet * count($union);
+            $racetext .= "\t\t\t'win(union)' => '" . implode(", ", $union) . "',\n"; 
+            $totalBets[$raceNumber] += 2 * $unitBet * count($union);
             $totalWin -= $unitBet * count($union);
+            $totalPlaceUnion -= $unitBet * count($union);
             if(isset($officialWin) && in_array($officialWin[0], $union)){
                 $totalRace[$raceNumber] += 1/10 * $unitBet * $winAmount;
                 $racetext .= "\t\t\t'1 won(win bet)' => " . 1/10 * $unitBet * $winAmount . ",\n";
                 $totalWin += 1/10 * $unitBet * $winAmount;
             }
-            $racetext .= "\t\t\t'win(experimental $revision)' => '" . implode(", ", $union) . "',\n"; 
+            if(isset($officialWin) && !empty(array_intersect($union, array_slice($officialWin, 0, 3)))){
+                $jackpot = array_intersect($union, array_slice($officialWin, 0, 3));
+                foreach($jackpot as $jacky){
+                    if(isset($placeAmount[$jacky])){
+                        $totalRace[$raceNumber] += (1 * $unitBet / 10) * $placeAmount[$jacky];
+                        $racetext .= "\t\t\t'7 won(place bet $jacky)' => " . (1 * $unitBet / 10) * $placeAmount[$jacky] . ",\n";
+                        $totalPlaceUnion += (1 * $unitBet / 10) * $placeAmount[$jacky];
+                    }
+                }
+            }
         }
     }
     if($condition1 && $condition2 && count($favorites) >= 3){
@@ -268,6 +280,7 @@ $outtext .= "//total place end wp: $totalPlaceEndW\n";
 $outtext .= "//total place wp: $totalPlaceW\n";
 $outtext .= "//total sure place: $totalSurePlace\n";
 $outtext .= "//total win: $totalWin\n";
+$outtext .= "//total place union: $totalPlaceUnion\n";
 $outtext .= "//total: $total\n";
 file_put_contents($outFile, $outtext);
 ?>
