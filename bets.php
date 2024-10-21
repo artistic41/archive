@@ -157,7 +157,7 @@ for ($raceNumber = 1; $raceNumber <= $numberOfRaces; $raceNumber++) {
     sort($winInter);
     $racetext .= "\t\t'win inter' => '" . implode(", ", $winInter) . "',\n";
     if(!empty($winInter2)){
-        $racetext .= "\t\t'win inter 2' => '" . implode(", ", $winInter2) . "',\n";
+        $racetext .= "\t\t'win inter 2' => '" . implode(", ", $winInter2) . "',//count win inter 2: " . count($winInter2) . "\n";
     }
     $unitBet = 100;
     $allValues = [];

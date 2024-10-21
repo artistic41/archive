@@ -24,7 +24,7 @@ return [
 			5 => 41,
 		],
 		'win inter' => '1, 6, 8',
-		'win inter 2' => '1',
+		'win inter 2' => '1',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 9',
 		'bets' => [
 			'place(end-favorites )' => '7',
@@ -86,7 +86,7 @@ return [
 			8 => 135.5,
 		],
 		'win inter' => '3, 9',
-		'win inter 2' => '5',
+		'win inter 2' => '5',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 5, 6, 7',
 		'bets' => [
 			'place(end-favorites )' => '7',
@@ -119,7 +119,7 @@ return [
 			10 => 32,
 		],
 		'win inter' => '',
-		'win inter 2' => '11',
+		'win inter 2' => '11',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12',
 		'bets' => [
 		],
@@ -149,7 +149,7 @@ return [
 			7 => 20.5,
 		],
 		'win inter' => '4',
-		'win inter 2' => '2',
+		'win inter 2' => '2',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 10, 11',
 		'bets' => [
 			'win(union)' => '2, 4, 7, 12',
@@ -187,7 +187,7 @@ return [
 			1 => 63.5,
 		],
 		'win inter' => '1',
-		'win inter 2' => '9',
+		'win inter 2' => '9',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
 		'bets' => [
 			'place(end-favorites )' => '12',
@@ -219,7 +219,7 @@ return [
 			4 => 69.5,
 		],
 		'win inter' => '1, 2',
-		'win inter 2' => '2',
+		'win inter 2' => '2',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 9',
 		'bets' => [
 			'place(end-favorites )' => '6',
@@ -253,7 +253,7 @@ return [
 			1 => 49,
 		],
 		'win inter' => '4, 6, 8',
-		'win inter 2' => '2, 6',
+		'win inter 2' => '2, 6',//count win inter 2: 2
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8',
 		'bets' => [
 			'place(end-favorites )' => '8',
@@ -287,7 +287,7 @@ return [
 			7 => 16.5,
 		],
 		'win inter' => '5, 8, 12',
-		'win inter 2' => '2, 11',
+		'win inter 2' => '2, 11',//count win inter 2: 2
 		'allValues' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11',
 		'bets' => [
 			'place(end-favorites )' => '8',
@@ -319,7 +319,7 @@ return [
 			8 => 41.5,
 		],
 		'win inter' => '10',
-		'win inter 2' => '3',
+		'win inter 2' => '3',//count win inter 2: 1
 		'allValues' => '',
 		'bets' => [
 		],
