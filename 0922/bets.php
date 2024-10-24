@@ -44,11 +44,11 @@ return [
 		'runners' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
 		'official win' => '4, 1, 7, 10',
 		'suggestions' => [
-			'win' => '1, 10',
-			'qin' => '1, 2, 6, 10',
-			'trio' => '1, 2, 6, 9, 10',//count trio: 5
+			'win' => '1, 5, 10',
+			'qin' => '1, 2, 5, 6, 10',
+			'trio' => '1, 2, 3, 5, 6, 9, 10',//count trio: 7
 			'inter' => '1',
-			'diff' => '3, 4, 5, 7, 8',//count diff: 5
+			'diff' => '4, 7, 8',//count diff: 3
 		],
 		'win amount' => 55,
 		'qin amount' => 102.5,
@@ -73,11 +73,11 @@ return [
 		'runners' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11',
 		'official win' => '7, 2, 5, 4',
 		'suggestions' => [
-			'win' => '',
-			'qin' => '',
-			'trio' => '',//count trio: 0
+			'win' => '2',
+			'qin' => '2',
+			'trio' => '1, 2',//count trio: 2
 			'inter' => '',
-			'diff' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11',//count diff: 11
+			'diff' => '3, 4, 5, 6, 7, 8, 9, 10, 11',//count diff: 9
 		],
 		'win amount' => 179.5,
 		'qin amount' => 799,
@@ -88,11 +88,15 @@ return [
 			5 => 10.1,
 		],
 		'win inter' => '2, 4, 9',
+		'win inter 2' => '2',//count win inter 2: 1
 		'allValues' => '1, 2, 3, 5, 6, 7',
 		'bets' => [
+			'place(wp )' => '5',
+			'3 won(place bet 5)' => 303,
 		],
-		'total bets' => 0,
+		'total bets' => 300,
 		'wp' => '5',//count wp: 1
+		'total won in race 3' => 3,
 	],
 	'4' => [
 		/**
@@ -252,11 +256,11 @@ return [
 		'runners' => '1, 2, 3, 4, 5, 6, 7, 8, 9, 10',
 		'official win' => '1, 5, 9, 3',
 		'suggestions' => [
-			'win' => '4, 7',
-			'qin' => '4, 6, 7',
-			'trio' => '4, 5, 6, 7, 9',//count trio: 5
-			'inter' => '4',
-			'diff' => '1, 2, 3, 8, 10',//count diff: 5
+			'win' => '4, 5, 7',
+			'qin' => '4, 5, 6, 7, 10',
+			'trio' => '4, 5, 6, 7, 9, 10',//count trio: 6
+			'inter' => '4, 5',
+			'diff' => '1, 2, 3, 8',//count diff: 4
 		],
 		'win amount' => 15.5,
 		'qin amount' => 25,
@@ -282,10 +286,10 @@ return [
 		'official win' => '7, 5, 2, 3',
 		'suggestions' => [
 			'win' => '1, 2, 9',
-			'qin' => '1, 2, 5, 9',
-			'trio' => '1, 2, 5, 9',//count trio: 4
+			'qin' => '1, 2, 5, 9, 11',
+			'trio' => '1, 2, 5, 9, 11',//count trio: 5
 			'inter' => '2',
-			'diff' => '3, 4, 6, 7, 8, 10, 11',//count diff: 7
+			'diff' => '3, 4, 6, 7, 8, 10',//count diff: 6
 		],
 		'win amount' => 225,
 		'qin amount' => 483.5,
@@ -305,8 +309,8 @@ return [
 ];
 //total place end favorites: -60
 //total place end wp: -60
-//total place wp: 0
+//total place wp: 3
 //total sure place: 0
 //total win: 0
 //total place union: 0
-//total: -120
+//total: -117
